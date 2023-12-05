@@ -13,7 +13,9 @@ int main() {
     psFile = fopen("dataB", "w");
 
     /* put names into file */
-    for (i = 0; i < strlen(names); i++) {
+    fprintf(psFile, "%c", 'N');
+
+    /* for (i = 0; i < strlen(names); i++) {
         fprintf(psFile, "%c", names[i]);
     }
     fprintf(psFile, "%c", '\0'); /* terminating null byte */
@@ -22,6 +24,8 @@ int main() {
     for (i = 0; i < (48 - strlen(names) -1); i++) {
         fprintf(psFile, "%c", '\0');
     }
+
+    /* change x30 */
 
     return 0;
 }

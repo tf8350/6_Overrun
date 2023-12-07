@@ -25,15 +25,15 @@ int main() {
 
     /* put mov instruction */
     uiInstr = MiniAssembler_mov(0, 'A');
-    fprintf(psFile, "%lu", uiInstr);
+    fprintf(psFile, "%i", uiInstr);
 
     /* put strb instruction */
     uiInstr = MiniAssembler_strb(0, 1);
-    fprintf(psFile, "%lu", uiInstr);
+    fprintf(psFile, "%i", uiInstr);
 
     /* put b instruction */
     uiInstr = MiniAssembler_b(ulAddrInMain, ulAddrOfB);
-    fprintf(psFile, "%lu", uiInstr);
+    fprintf(psFile, "%i", uiInstr);
 
     /* fill remaining buffer */
     for (ulIndex = 0; ulIndex < (48 - 20); ulIndex++) {

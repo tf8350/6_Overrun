@@ -108,6 +108,7 @@ unsigned int MiniAssembler_b(unsigned long ulAddr,
 
    /* calculate immediate value */
    uiImmed = ulAddr - ulAddrOfThisInstr;
+   uiImmed = uiImmed >> 2;
 
    /* set immediate value field */
    setField(uiImmed, 0, &uiInstr, 0, 26);

@@ -1,11 +1,18 @@
 /*--------------------------------------------------------------------*/
 /* createdataA.c                                                      */
+/* Produces a file called dataA with the student name, a nullbyte,    */
+/* instructions to change grade to 'A' then branch to the printf call */
+/* directly after grade = 'B' in grader, then padding to overrun the  */
+/* stack, and the address of the first instruction in BSS, which will */
+/* overwrite getName's stored x30.                                    */
 /*--------------------------------------------------------------------*/
 
 #include <stdio.h>
 #include <string.h>
 #include "miniassembler.h"
 
+/* Accepts no inputs. Creates a file called dataA and writes data to
+   that file that will lead to an A attack. Returns 0. */
 int main() {
     size_t ulIndex; /* index for the loop */
     FILE *psFile; /* file */

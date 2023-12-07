@@ -1,11 +1,20 @@
 /*--------------------------------------------------------------------*/
 /* createdataAplus.c                                                  */
+/* Produces a file called dataAplus with the student name, nullbyte,  */
+/* machine instructions to change grade to '+', set x30 to the printf */
+/* instruction directly after grade = 'B' in grader, branch to printf */
+/* with argument "A\0", padding to fill remainder of the stack,       */
+/* except for the last two bytes of the stack, which get values 'A'   */
+/* and '\0', then the address of the first instruction in BSS, which  */
+/* will overwrite getName's stored x30.                               */
 /*--------------------------------------------------------------------*/
 
 #include <stdio.h>
 #include <string.h>
 #include "miniassembler.h"
 
+/* Accepts no inputs. Creates a file called dataAplus and writes data to
+   that file that will lead to an A+ attack. Returns 0. */
 int main() {
     size_t ulIndex; /* index for the loop */
     FILE *psFile; /* file */

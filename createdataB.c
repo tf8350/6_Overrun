@@ -1,10 +1,16 @@
 /*--------------------------------------------------------------------*/
 /* createdataB.c                                                      */
+/* Produces a file called dataB with the student name, a nullbyte,    */
+/* padding to overrun the stack, and the address of the instruction   */
+/* in main to get a B, the latter of which will overwrite getName's   */
+/* stored x30.                                                        */
 /*--------------------------------------------------------------------*/
 
 #include <stdio.h>
 #include <string.h>
 
+/* Accepts no inputs. Creates a file called dataB and writes data to
+   that file that will lead to a B attack. Returns 0. */
 int main() {
     size_t i; /* index for the loop */
     FILE *psFile; /* file */

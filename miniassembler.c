@@ -21,21 +21,22 @@ static void setField(unsigned int uiSrc, unsigned int uiSrcStartBit,
 {
    /* Your code here */
    unsigned int uiSrcIso = 1;
+   unsigned int uiIndex;
 
    /* calculate the value to AND with the soures to isolate the bits */
-   for (unsigned int i = 0; i < uiNumBits; i++) {
+   for (uiIndex = 0; uiIndex < uiNumBits; uiIndex++) {
       uiSrcIso *= 2; /* get to the correct power of 2 */
    }
    uiSrcIso -= 1; /* subtract 1 */
-   uiSrcIso << uiSrcStartBit; /* start at beginning of src bits */
-   if (uiNumBits == 0) uiSrcIso = 0;
+   /* start at beginning of src bits */
+   uiSrcIso = uiSrcIso << uiSrcStartBit;
 
    /* uiSrc AND uiSrcIso to isolate correct bits of Src */
    uiSrc = uiSrc & uiSrcIso;
 
    /* shift isolated source to start at dest start bit */
-   uiSrc >> uiSrcStartBit;
-   uiSrc << uiDestStartBit;
+   uiSrc = uiSrc >> uiSrcStartBit;
+   uiSrc = uiSrc << uiDestStartBit;
 
    /* set bits of *puiDest */
    *puiDest = *puiDest | uiSrc;
@@ -47,7 +48,7 @@ static void setField(unsigned int uiSrc, unsigned int uiSrcStartBit,
 unsigned int MiniAssembler_mov(unsigned int uiReg, int iImmed)
 {
    /* Your code here */
-
+   return 0;
 }
 
 /*--------------------------------------------------------------------*/
@@ -79,7 +80,7 @@ unsigned int MiniAssembler_strb(unsigned int uiFromReg,
    unsigned int uiToReg)
 {
    /* Your code here */
-
+   return 0;
 }
 
 /*--------------------------------------------------------------------*/
@@ -88,5 +89,5 @@ unsigned int MiniAssembler_b(unsigned long ulAddr,
    unsigned long ulAddrOfThisInstr)
 {
    /* Your code here */
-
+   return 0;
 }

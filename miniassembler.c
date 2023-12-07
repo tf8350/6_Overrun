@@ -20,6 +20,25 @@ static void setField(unsigned int uiSrc, unsigned int uiSrcStartBit,
                      unsigned int uiNumBits)
 {
    /* Your code here */
+   unsigned int uiSrcIso = 1;
+
+   /* calculate the value to AND with the soures to isolate the bits */
+   for (unsigned int i = 0; i < uiNumBits; i++) {
+      uiSrcIso *= 2; /* get to the correct power of 2 */
+   }
+   uiSrcIso -= 1; /* subtract 1 */
+   uiSrcIso << uiSrcStartBit; /* start at beginning of src bits */
+   if (uiNumBits == 0) uiSrcIso = 0;
+
+   /* uiSrc AND uiSrcIso to isolate correct bits of Src */
+   uiSrc = uiSrc & uiSrcIso;
+
+   /* shift isolated source to start at dest start bit */
+   uiSrc >> uiSrcStartBit;
+   uiSrc << uiDestStartBit;
+
+   /* set bits of *puiDest */
+   *puiDest = *puiDest | uiSrc;
 
 }
 

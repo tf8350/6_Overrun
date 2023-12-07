@@ -19,7 +19,7 @@ int main() {
     unsigned int uiInstr; /* stores each instruction getting added */
     
     /* create and open file dataB */
-    psFile = fopen("dataA", "w");
+    psFile = fopen("dataAplus", "w");
 
     /* put names into file */
     fprintf(psFile, "%c", 'N');

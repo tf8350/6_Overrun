@@ -11,11 +11,13 @@ int main() {
     FILE *psFile; /* file */
     unsigned long ulAddrInMain = 0x40089c; /* address of grade printf */
     unsigned long ulAddrInBSS = 0x42005c; /* address of code in BSS */
+    unsigned long ulAddrOfAdr = 0x420060; /* address of adr instr */
     unsigned long ulAddrOfB = 0x420068; /* address of b instr */
+    unsigned long ulAddrOfGrade = 0x420044; /* address of grade */
     unsigned int uiInstr; /* stores each instruction getting added */
     
     /* create and open file dataB */
-    psFile = fopen("dataB", "w");
+    psFile = fopen("dataA", "w");
 
     /* put names into file */
     fprintf(psFile, "%c", 'N');
@@ -25,6 +27,10 @@ int main() {
 
     /* put mov instruction */
     uiInstr = MiniAssembler_mov(0, 'A');
+    fprintf(psFile, "%i", uiInstr);
+
+    /* put adr instruction */
+    uiInstr = MiniAssembler_adr(1, 0x420044, ulAddrOfAdr);
     fprintf(psFile, "%i", uiInstr);
 
     /* put strb instruction */

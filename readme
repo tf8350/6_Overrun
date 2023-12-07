@@ -110,7 +110,9 @@ and assembly.
 will help your grader to grade it in the most favorable light? In
 particular, what bugs are in your submission?
 
-
+The formatting of tables looks correct in emacs and pico, but the
+indentation does not look correct on VSCode, so might be harder to read
+if using VSCode. 
 
 ------------------------------------------------------------------------
 What are your sentences from Step 1?

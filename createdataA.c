@@ -27,19 +27,23 @@ int main() {
 
     /* put mov instruction */
     uiInstr = MiniAssembler_mov(0, 'A');
-    fprintf(psFile, "%i", uiInstr);
+    /* fprintf(psFile, "%i", uiInstr); */
+    fwrite(&uiInstr, sizeof(unsigned int), 1, psFile);
 
     /* put adr instruction */
     uiInstr = MiniAssembler_adr(1, ulAddrOfGrade, ulAddrOfAdr);
-    fprintf(psFile, "%i", uiInstr);
+    /* fprintf(psFile, "%i", uiInstr); */
+    fwrite(&uiInstr, sizeof(unsigned int), 1, psFile);
 
     /* put strb instruction */
     uiInstr = MiniAssembler_strb(0, 1);
-    fprintf(psFile, "%i", uiInstr);
+    /* fprintf(psFile, "%i", uiInstr); */
+    fwrite(&uiInstr, sizeof(unsigned int), 1, psFile);
 
     /* put b instruction */
     uiInstr = MiniAssembler_b(ulAddrInMain, ulAddrOfB);
-    fprintf(psFile, "%i", uiInstr);
+    /* fprintf(psFile, "%i", uiInstr); */
+    fwrite(&uiInstr, sizeof(unsigned int), 1, psFile);
 
     /* fill remaining buffer */
     for (ulIndex = 0; ulIndex < (48 - 20); ulIndex++) {

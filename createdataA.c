@@ -30,7 +30,7 @@ int main() {
     fprintf(psFile, "%i", uiInstr);
 
     /* put adr instruction */
-    uiInstr = MiniAssembler_adr(1, 0x420044, ulAddrOfAdr);
+    uiInstr = MiniAssembler_adr(1, ulAddrOfGrade, ulAddrOfAdr);
     fprintf(psFile, "%i", uiInstr);
 
     /* put strb instruction */

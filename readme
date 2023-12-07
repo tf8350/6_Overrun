@@ -3,12 +3,12 @@ Assignment 6 readme File
 ------------------------------------------------------------------------
 Student 1: What is your name?
 
-
+Nora Graves
 
 ------------------------------------------------------------------------
 Student 2: What is your name?
 
-
+Teddy Feig
 
 ------------------------------------------------------------------------
 Student 1: What authorized sources of information did you use to
@@ -17,8 +17,22 @@ information given in the "Policies" web page (also available on armlab
 in the file ~cos217/AuthorizedSourcesList ) to this section of the
 readme file, and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
 
+The course's website.
+
+Documents that are referenced directly by the course's website. Such 
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+The course's current staff members outside of class time through Ed.
+
+Web search for Step 1: https://www.law.cornell.edu/uscode/text/18/1030
 
 ------------------------------------------------------------------------
 Student 2: What authorized sources of information did you use to
@@ -27,7 +41,22 @@ information given in the "Policies" web page (also available on armlab
 in the file ~cos217/AuthorizedSourcesList ) to this section of the
 readme file, and edit it as appropriate.
 
+The course's lectures.
 
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such 
+documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the armlab cluster.
+
+The course's current staff members outside of class time through Ed.
+
+Web search for Step 1: https://www.law.cornell.edu/uscode/text/18/1030
 
 ------------------------------------------------------------------------
 Student 1: What unauthorized sources of information did you use to
@@ -41,7 +70,7 @@ nature of the interaction, may additionally require the interaction
 being reported to the Committee on Discipline. Write "None" if you used
 no unauthorized sources of information.
 
-
+None
 
 ------------------------------------------------------------------------
 Student 2: What unauthorized sources of information did you use to
@@ -55,19 +84,26 @@ nature of the interaction, may additionally require the interaction
 being reported to the Committee on Discipline. Write "None" if you used
 no unauthorized sources of information.
 
-
+None
 
 ------------------------------------------------------------------------
 Student 1: What is your assessment of the assignment? Was it helpful?
 Was it fun?
 
-
+This was one of the more interesting assignments, and I enjoyed the
+very different application of coding. It was a little helpful for
+writing binary data to files, but there was a lot of trial and error,
+even with precept handouts, which was less helpful.
 
 ------------------------------------------------------------------------
 Student 2: What is your assessment of the assignment? Was it helpful?
 Was it fun?
 
-
+The assignment was interesting. The mini-assembler, however, while a 
+useful part, meant that when writing the createdata files, I was no 
+longer thinking about the machine code. It felt like we did not spend
+much time working in machine and quickly reverted back to thinking in c
+and assembly.
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
@@ -79,6 +115,15 @@ particular, what bugs are in your submission?
 ------------------------------------------------------------------------
 What are your sentences from Step 1?
 
+According to 18 U.S. Code 1030, if you were to use a buffer overrun 
+attack to commit fraud or related activity in connection with computers,
+but did not attempt to cause death and did not knowingly or recklessly
+cause death, then you could receive a maximum penalty of ten years in 
+prison.
 
+According to 18 U.S. Code 1030, if you were to use a buffer overrun 
+attack to commit fraud or related activity in connection with computers,
+and attempted to cause death or knowingly or recklessly caused death, 
+then you could receive a maximum penalty of any term or life in prison.
 
 ------------------------------------------------------------------------
